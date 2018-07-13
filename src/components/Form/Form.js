@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import {Switch, Route, Link} from 'react-router-dom'
+import routes from '../../routes'
 
 
 class Form extends Component {
@@ -66,8 +68,10 @@ class Form extends Component {
         <input onChange={(e) => this.updateImageUrl(e.target.value)}
           placeholder="Image Url" />
         <button onClick={()=>this.cancel()}>Cancel</button>
-        <button onClick={()=>this.makeItem()}>Add to Inventory</button>
+        <Link to='/form'> <button onClick={()=>this.makeItem()}>Add to Inventory</button> </Link>
+        {routes}
       </div>
+
     )
   }
 }

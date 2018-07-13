@@ -1,15 +1,17 @@
 import React from 'react'
 import{Switch, Route} from 'react-router-dom'
-import Home from './components/'
-import About from './components/About/About'
-import ClassList from './components/ClassList/ClassList'
-import Student from './components/Student/Student'
+import App from './App'
+import Dashboard from './components/Dashboard/Dashboard'
+import Form from './components/Form/Form'
+import Header from './components/Header/Header'
+import Product from './components/Product/Product'
 
 export default (
     <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/classlist/:class" component={ClassList}/>
-        <Route path="/student/:id" component={Student}/>
+        <Route exact path="/" component={App} />
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/form" component={Form}/>
+        <Route path="/header" component={Header}/>
+        <Route path="/products" component={Product}/>
     </Switch>
 )

@@ -16,8 +16,8 @@ class Dashboard extends Component {
 
   render(){
     let invArr = [];
-    this.props.inventory.forEach((e,i)=>{
-      let newArr = <Product deleteItem={this.deleteItem} key={i} name={e.product_name} price={e.product_price} image={e.image_url} id={e.product_id} />
+    this.props.inventory.forEach((e,i)=>{ console.log(e)
+      let newArr = <Product deleteItem={this.deleteItem} key={i} name={e.name} price={e.price} image={e.image_url} id={e.product_id} />
       invArr.push(newArr)
     })
 
